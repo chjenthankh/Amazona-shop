@@ -7,7 +7,6 @@ import userRoute from "./routes/userRoute";
 import productRoute from "./routes/productRoute";
 import orderRoute from "./routes/orderRoute";
 import bodyParser from "body-parser";
-const cors = require('cors');
 const path = require('path')
 
 dotenv.config();
@@ -22,7 +21,7 @@ mongoose
   .catch((error) => console.log(error.reason));
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+
 
 app.use(express.static(path.join(__dirname, '../build')))
 app.get('*', (req, res) => {
