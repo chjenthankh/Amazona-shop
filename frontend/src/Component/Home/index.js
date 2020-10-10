@@ -18,6 +18,13 @@ function Home(props) {
       //
     };
   }, [category]);
+  useEffect(() => {
+    dispatch(listProducts(category, searchKeyword, sortOrder));
+
+    return () => {
+      //
+    };
+  }, [sortOrder]);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -25,7 +32,6 @@ function Home(props) {
   };
   const sortHandler = (e) => {
     setSortOrder(e.target.value);
-    dispatch(listProducts(category, searchKeyword, sortOrder));
   };
   return <div>
     {category && <h2>{category}</h2>}
