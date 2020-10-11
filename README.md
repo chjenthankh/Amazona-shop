@@ -1,6 +1,6 @@
 # Amazona-shop
 Simple shopping with react, redux, nodejs and mongdb
-#Run Backend
+# Run Backend
 $ npm install
 $ npm start
 # Run Frontend
