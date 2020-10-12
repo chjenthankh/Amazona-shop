@@ -37,6 +37,6 @@ app.get('/api/config/paypal', (req, res) => {
 
 const port = process.env.PORT || 5000;
 
-server.listen(port, () => {
+app.listen(port, () => {
     console.log("App is running on port " + port);
 });
